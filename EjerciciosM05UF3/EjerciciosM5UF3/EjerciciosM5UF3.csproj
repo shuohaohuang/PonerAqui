@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CompteCorrent\CompteCorrent.csproj" />
+    <ProjectReference Include="..\proveidor\Proveidor.csproj" />
+    <ProjectReference Include="..\Restaurant\Restaurant.csproj" />
+    <ProjectReference Include="..\Vehicles\Vehicles.csproj" />
+  </ItemGroup>
+
 </Project>

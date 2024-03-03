@@ -1,10 +1,12 @@
-﻿namespace EjerciciosM03UF4
+﻿using Objetos.Ex16;
+namespace EjerciciosM03UF4
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            PaymentCard card = new PaymentCard(50);
+            Console.WriteLine(card);
         }
     }
 }

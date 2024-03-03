@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Objetos.Ex9_10.Book" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAEAEAAAABAAAAAAAAAAAAABIAAAAABA=</HashCode>
+      <FileName>Ex9_10\Book.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Objetos.Ex9_10.ALecture" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAgiIAAAAQAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Ex9_10\ALibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Objetos.Ex9_10.Magazine" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAgAAAAAgAAAABIAAAAAAA=</HashCode>
+      <FileName>Ex9_10\Magazine.cs</FileName>
+      <NewMemberFileName>Ex9_10\Book.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Objetos.Ex9_10.NewsPaper" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAhIAAAAAAA=</HashCode>
+      <FileName>Ex9_10\NewsPaper.cs</FileName>
+      <NewMemberFileName>Ex9_10\Book.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Objetos.Ex9_10.ILendAble" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABIAAAAAAA=</HashCode>
+      <FileName>Ex9_10\ILendAble.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>
