@@ -1,7 +1,8 @@
-﻿
-
-using ejercicios.Ej1;
-using Ejercicios.Ej1;
+﻿using Ejercicios.Ex2;
+using Ejercicios.Ex3;
+using Ejercicios.Ex1;
+using Ejercicios.Ex5;
+using Ejercicios.Ex6;
 
 namespace EjerciciosM03Uf5
 {
@@ -9,37 +10,19 @@ namespace EjerciciosM03Uf5
     {
         public static void Main()
         {
-            List<Book> Books = [];
-            Books.Add(new Book());
-            Books.Add(new Book(3, "Fausto", 1000));
-            Books.Add(new Book(2, "Diccionario", 100));
-            Books.Add(new Book(5, "La Odisea", 4000));
-            Books.Add(new Book(4, "Nada", 300));
-            
+            Owner owner = new("sda", "241934", 4135245);
+            Pacient pacient = new("fdadsfad", "persian", 23.43f, 2);
+            Visit visit = new(owner, pacient, "fafa");
 
-            Books.Sort(Book.CompareDescend);
+            Console.WriteLine(visit.ToString());
+            int a = 3;
+            DateTime today = new DateTime(2, 2, 1);
+            Date.PersonalizedData A = Date.UntilToday(today);
+            Console.WriteLine(A.GetYear());
 
-            foreach (Book book in Books) 
-            {
-                Console.WriteLine(book);
-            }
-            Console.WriteLine("********************************");
-
-            Books.Sort();
-
-            foreach (Book book in Books)
-            {
-                Console.WriteLine(book);
-            }
-            Console.WriteLine("********************************");
-
-
-            Books.Sort(new BookComparer());
-
-            foreach (Book book in Books)
-            {
-                Console.WriteLine(book);
-            }
+            Console.WriteLine(WeekendDays.Day(today));
+            //Employee employee = new("pepe", "da", new DateTime(2024, 3, 5));
+            //Console.WriteLine(employee.Age());
 
         }
     }

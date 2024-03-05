@@ -1,4 +1,4 @@
-﻿namespace ejercicios.Ej1
+﻿namespace Ejercicios.Ex1
 {
     public class Book:IComparable<Book>,IComparer<Book>
     {

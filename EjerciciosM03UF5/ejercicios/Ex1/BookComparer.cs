@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ejercicios.Ej1;
+using Ejercicios.Ex1;
 
-namespace Ejercicios.Ej1
+namespace Ejercicios.Ex1
 {
     public class BookComparer : IComparer<Book>
     {
