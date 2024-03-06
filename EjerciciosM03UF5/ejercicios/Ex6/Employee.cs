@@ -1,17 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using static Ejercicios.Ex3.Date;
 
 namespace Ejercicios.Ex6
 {
-    public class Employee
+    public class Employee : IComparable<Employee>
     {
         private const float DefaultDalary = 1800f;
         private const int DefaultPayments = 14;
 
-        public Employee(string firstName, string lastName, DateTime birthDate, string code, DateTime hireData, float monthSalary, int payments)
+        public Employee(
+            string firstName,
+            string lastName,
+            DateTime birthDate,
+            string code,
+            DateTime hireData,
+            float monthSalary,
+            int payments
+        )
         {
             FirstName = firstName;
             LastName = lastName;
@@ -23,16 +33,22 @@ namespace Ejercicios.Ex6
             numEmployees = 0;
         }
 
-        public Employee(string firstName, string lastName, DateTime birthDate, string code, DateTime hireData):this(firstName,lastName,birthDate,code,hireData,DefaultDalary,DefaultPayments){
-
-        }
+        public Employee(
+            string firstName,
+            string lastName,
+            DateTime birthDate,
+            string code,
+            DateTime hireData
+        )
+            : this(firstName, lastName, birthDate, code, hireData, DefaultDalary, DefaultPayments)
+        { }
 
         ~Employee()
         {
             numEmployees--;
         }
 
-        private static int numEmployees = 0; 
+        private static int numEmployees = 0;
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -44,13 +60,62 @@ namespace Ejercicios.Ex6
 
         public int Age()
         {
-            int age= DateTime.Now.Year-BirthDate.Year-1;
-            bool pastDay= DateTime.Now.Day>=BirthDate.Day;
+            int age = DateTime.Now.Year - BirthDate.Year - 1;
+            bool pastDay = DateTime.Now.Day >= BirthDate.Day;
             bool pastMonth = DateTime.Now.Month > BirthDate.Month;
             bool sameMonth = DateTime.Now.Month == BirthDate.Month;
-            if (pastMonth) return ++age;
-            if(sameMonth&pastDay)return ++age;
+            if (pastMonth)
+                return ++age;
+            if (sameMonth & pastDay)
+                return ++age;
             return age;
+        }
+
+        public string FullName()
+        {
+            return this.FirstName + " " + this.LastName;
+        }
+
+        public string FullNameReverse()
+        {
+            return this.LastName + " " + this.FirstName;
+        }
+
+        public int Antiquity()
+        {
+            DateTime today = DateTime.Now;
+            int years = today.Year - HireData.Year;
+            if (this.HireData > today.AddYears(-years))
+            {
+                years--;
+            }
+            return years;
+        }
+
+        public float AnnualSalary()
+        {
+            return this.MonthSalary * this.Payments;
+        }
+
+        public override string ToString()
+        {
+            string format =
+                "-----------------------------------------------------------------------------------------------------\r\n                           E M P L O Y E E\r\n-----------------------------------------------------------------------------------------------------\r\n" +
+                $">Code: {this.Code}\r\n" +
+                $">Firstname: {this.FirstName}\r\n" +
+                $">Last name: {this.LastName}\r\n" +
+                $">Full name: {this.FullName()}  \r\n" +
+                $">Reverse name: {this.FullNameReverse()}\r\n" +
+                $">Age: {this.Age()}\r\n" +
+                $">Seniority:{this.Antiquity()}\r\n" +
+                $">Annual salary:{this.AnnualSalary()}\r\n";
+            return format;
+        }
+
+        public int CompareTo(Employee? other)
+        {
+            if(other==null) return 0;
+            return other.Antiquity().CompareTo(this.Antiquity());
         }
     }
 }

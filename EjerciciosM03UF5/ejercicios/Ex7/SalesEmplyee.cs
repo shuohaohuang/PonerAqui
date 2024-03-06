@@ -14,6 +14,22 @@ namespace Ejercicios.Ex7
         }
 
         public float Commission { get; set; }
-        
+
+        public override string ToString()
+        {
+            string format =
+                "-----------------------------------------------------------------------------------------------------\r\n                           E M P L O Y E E\r\n-----------------------------------------------------------------------------------------------------\r\n" +
+                $">Code: {this.Code}\r\n" +
+                $">Firstname: {this.FirstName}\r\n" +
+                $">Last name: {this.LastName}\r\n" +
+                $">Full name: {this.FullName()}  \r\n" +
+                $">Reverse name: {this.FullNameReverse()}\r\n" +
+                $">Age: {this.Age()}\r\n" +
+                $">Seniority:{this.Antiquity()}\r\n" +
+                $">Annual salary:{this.AnnualSalary()}\r\n"+
+                $">Commission: {this.Commission}\r\n";
+            return format;
+        }
+
     }
 }
