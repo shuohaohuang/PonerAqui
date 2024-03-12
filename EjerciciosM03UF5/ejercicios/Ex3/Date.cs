@@ -28,6 +28,10 @@ namespace Ejercicios.Ex3
             {
                 return Day;
             }
+            public override string ToString() 
+            {
+                return $"{this.Year} anys,{this.Month} mesos,{this.Day} dia ";
+            }
         }
 
         public static PersonalizedData UntilToday(DateTime time)

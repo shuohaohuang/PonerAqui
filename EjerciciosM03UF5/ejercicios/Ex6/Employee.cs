@@ -99,16 +99,19 @@ namespace Ejercicios.Ex6
 
         public override string ToString()
         {
-            string format =
-                "-----------------------------------------------------------------------------------------------------\r\n                           E M P L O Y E E\r\n-----------------------------------------------------------------------------------------------------\r\n" +
-                $">Code: {this.Code}\r\n" +
-                $">Firstname: {this.FirstName}\r\n" +
-                $">Last name: {this.LastName}\r\n" +
-                $">Full name: {this.FullName()}  \r\n" +
-                $">Reverse name: {this.FullNameReverse()}\r\n" +
-                $">Age: {this.Age()}\r\n" +
-                $">Seniority:{this.Antiquity()}\r\n" +
-                $">Annual salary:{this.AnnualSalary()}\r\n";
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("-----------------------------------------------------------------------------------------------------\r\n                           E M P L O Y E E\r\n-----------------------------------------------------------------------------------------------------\r\n");
+            stringBuilder.Append($">Code: {this.Code}\r\n");
+            stringBuilder.Append($">Firstname: {this.FirstName}\r\n");
+            stringBuilder.Append($">Last name: {this.LastName}\r\n");
+            stringBuilder.Append($">Full name: {this.FullName()}  \r\n");
+            stringBuilder.Append($">Reverse name: {this.FullNameReverse()}\r\n");
+            stringBuilder.Append($">Age: {this.Age()}\r\n");
+            stringBuilder.Append($">Seniority:{this.Antiquity()}\r\n");
+            stringBuilder.Append($">Annual salary:{this.AnnualSalary()}\r\n");
+
+            string format = stringBuilder.ToString();
+
             return format;
         }
 

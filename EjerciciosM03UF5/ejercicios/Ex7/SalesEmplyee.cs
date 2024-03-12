@@ -9,16 +9,17 @@ namespace Ejercicios.Ex7
 {
     public class SalesEmplyee : Employee
     {
+        public float Commission { get; set; }
+
         public SalesEmplyee(string firstName, string lastName, DateTime birthDate, string code, DateTime hireData, float monthSalary, int payments) : base(firstName, lastName, birthDate, code, hireData, monthSalary, payments)
         {
         }
 
-        public float Commission { get; set; }
 
         public override string ToString()
         {
             string format =
-                "-----------------------------------------------------------------------------------------------------\r\n                           E M P L O Y E E\r\n-----------------------------------------------------------------------------------------------------\r\n" +
+                "-----------------------------------------------------------------------------------------------------\r\n               S A L E S      E M P L O Y E E\r\n-----------------------------------------------------------------------------------------------------\r\n" +
                 $">Code: {this.Code}\r\n" +
                 $">Firstname: {this.FirstName}\r\n" +
                 $">Last name: {this.LastName}\r\n" +
