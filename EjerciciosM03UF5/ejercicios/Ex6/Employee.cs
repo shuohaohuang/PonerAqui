@@ -110,9 +110,7 @@ namespace Ejercicios.Ex6
             stringBuilder.Append($">Seniority:{this.Antiquity()}\r\n");
             stringBuilder.Append($">Annual salary:{this.AnnualSalary()}\r\n");
 
-            string format = stringBuilder.ToString();
-
-            return format;
+            return stringBuilder.ToString();
         }
 
         public int CompareTo(Employee? other)
